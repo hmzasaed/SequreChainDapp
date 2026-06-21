@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "SeQureChain",
+    "slug": "sequrechain",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#030D1A"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lgu.sequrechain",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Camera is used to capture photo/video evidence.",
+        "NSLocationWhenInUseUsageDescription": "Location is used to record evidence collection coordinates.",
+        "NSMicrophoneUsageDescription": "Microphone is used to record audio evidence.",
+        "NSPhotoLibraryUsageDescription": "Photo library access to select evidence files."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#030D1A"
+      },
+      "package": "com.lgu.sequrechain",
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single",
+      "name": "BBEMS - Blockchain Evidence Management",
+      "shortName": "BBEMS",
+      "lang": "en",
+      "themeColor": "#1A56DB",
+      "backgroundColor": "#030D1A"
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-location",
+      [
+        "expo-image-picker",
+        { "photosPermission": "The app accesses your photos to upload as evidence." }
+      ]
+    ],
+    "extra": {
+      "eas": { "projectId": "your-eas-project-id" }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "sequrechain",
+  "version": "9.0.0",
+  "private": true,
+  "scripts": {
+    "install:all":     "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "start:backend":   "cd backend && npm run dev",
+    "start:frontend":  "cd frontend && npm run web",
+    "start:mobile":    "cd frontend && npx expo start",
+    "deploy:contract": "npx hardhat run scripts/deploy.js --network sepolia",
+    "compile":         "npx hardhat compile"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.22.1"
+  }
+}
